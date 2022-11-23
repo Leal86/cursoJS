@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Verificador de Idade</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
@@ -16,21 +16,34 @@
     </header>
     <section>
         <div>
-            <div>
-                Ano de nascimento: <input type="number" name="ano" id="iano">
-            </div>
-            <div>
-                Sexo: Masculino <input type="radio" name="sexo" id="isexoM">
-                Feminino <input type="radio" name="sexo" id="isexoF">
-            </div>
-            
+
+            <form action="script.js">
+
+                <p>
+                    <label for="iano">Ano de nascimento:</label>
+                    <input type="number" name="ano" id="iano">
+                </p>
+
+                <p>
+                    Sexo:
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="sexo" id="masc" checked>
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="sexo" id="fem">
+                </p>
+
+                <p>
+                    <input type="button" value="Verificar" onclick="calcular()">
+                </p>
+            </form>
+
         </div>
-        <div>
-            Olá!
+        <div id="resultado">
+            <p id="msg">Preencha os dados e clique para ver o resultado.</p>
         </div>
     </section>
     <footer>
-        <p>&copy; Alexsander Leal</p>
+        <p>&copy;Alexsander Leal</p>
     </footer>
     <script src="script.js"></script>
 </body>
