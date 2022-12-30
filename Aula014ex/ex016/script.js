@@ -1,35 +1,40 @@
 function contar() {
-    var inicio = window.document.getElementById('istart')
-    var fim = window.document.getElementById('iend')
-    var passo = window.document.getElementById('ijump')
-    var resultado = window.document.getElementById('resultado')
+    var ini = document.getElementById('istart')
+    var fim = document.getElementById('iend')
+    var jump = document.getElementById('ijump')
+    var res = document.getElementById('resultado')
 
+    res.innerHTML = '<br>Vamos começar:<br>'
 
-    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        resultado.innerHTML = 'Impossível contar!'
-        //window.alert('[ERRO] Faltam dados!')
+    if (ini.value.length == 0 || fim.value.length == 0 || jump.value.length == 0) {
+        window.alert('[ERRO]: Faltam dados!')
     } else {
-        resultado.innerHTML = 'Contando: <br>'
-        var i = Number(inicio.value)
-        var f = Number(fim.value)
-        var p = Number(passo.value)
-        if (p == 0) {
-            window.alert('Passo inválido! Considerando PASSO 1')
+        res.innerHTML = '<br>Contando: <br>'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(jump.value)
+
+        if (p <= 0) {
+            window.alert('Passo inválido! Considerando passo 1')
             p = 1
         }
-        if (i < f){
-            // Contagem crescente
-            for (var c = i; c <= f; c += p){
-                resultado.innerHTML += ` ${c} \u{1F449}`
-            }
-            
+        
+        if (i < f) {
+            //contagem crescente
+            for(let c = i; c <= f; c += p){
+                res.innerHTML += `👉 ${c} `
+            } 
         } else {
-            // Contagem decrecente
-            for (var c = i; c >= f; c -= p) {
-                resultado.innerHTML += ` ${c} \u{1F449}`
+            //contagem decrescente
+            for(let c = i; c >= f; c -= p){
+                res.innerHTML += `👉 ${c} `
             }
-            
         }
-        resultado.innerHTML += `\u{1F3C1}`
+        
+        res.innerHTML += `🏁`
     }
+    
+
+ 
+
 }

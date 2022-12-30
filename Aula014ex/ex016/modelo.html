@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
@@ -15,26 +15,39 @@
         <h1>Vamos contar...</h1>
     </header>
     <section>
+
         <div>
-            <label for="istart">Início: </label>
-            <input type="number" name="inicio" id="istart" required><br><br>
+            <p>
+                <label for="istart">Inicio:</label>  
+                <input type="number" name="inicio" id="istart">
+            </p>
 
-            <label for="iend">Fim: </label>
-            <input type="number" name="fim" id="iend"><br><br>
+            <p>
+                <label for="iend">Fim:</label>
+                <input type="number" name="fim" id="iend">
+            </p>
 
-            <label for="ijump">Passo: </label>
-            <input type="number" name="passo" id="ijump"><br><br>
+            <p>
+                <label for="ijump">Passo:</label>
+                <input type="number" name="passo" id="ijump">
+            </p>
 
             <input type="button" value="Contar" onclick="contar()">
-        </div><br>
-        <div id="resultado">
             
         </div>
+
+        <div id="resultado">
+            <p>Preparando contagem...</p>
+        </div>
+
     </section>
+
     <footer>
         <p>&copy; Alexsander Leal</p>
     </footer>
-    <script src="script.js"></script>
+
 </body>
+
 <script src="script.js"></script>
+
 </html>
