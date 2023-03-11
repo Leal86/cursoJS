@@ -1,5 +1,5 @@
 let num = [5,8,2,9,3]
-num[6] = 1
+num[5] = 1
 num.push(4)
 
 console.log(`Nosso vetor é o ${num}.`)
